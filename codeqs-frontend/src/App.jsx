@@ -4,7 +4,7 @@ import { Routes,Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       {/* <Login/> */}
       <Routes>
         <Route path='/' element ={<Home/>}/>

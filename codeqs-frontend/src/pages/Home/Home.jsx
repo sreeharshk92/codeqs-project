@@ -1,7 +1,15 @@
+import Navbar from '../../Components/Navbar/Navbar'
 import './Home.css'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+     <div>
+        <Navbar/>
+     </div>
+
+        
+
+    </div>
   )
 }
 
