@@ -1,0 +1,25 @@
+.navbar{
+    width: 100%;
+    /* padding: 20px 6%; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 14px;
+    color: #e5e5e5;
+    z-index: 1;
+}
+.search {
+    width: 320px;
+    height: 38px;
+    border-radius: 18px;
+    border: 1px solid rgb(45, 143, 96);
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.search-icon {
+    font-size: 24px;
+    color: rgb(45, 143, 96);
+    cursor: pointer;
+    margin-left: 10px;
+}
