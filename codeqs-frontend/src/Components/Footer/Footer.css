@@ -1,0 +1,107 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding: 40px 10px; /* Increased padding for a more spacious layout */
+    background-color: #f7f7f7; /* Light background for contrast */
+    color: #5D5A6F;
+}
+
+.footer > div {
+    flex: 1;
+    margin: 0 20px; /* Uniform margin */
+}
+
+.footer-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.footer-one p {
+    padding-left: 7px;
+}
+
+.logoimg {
+    width: 120px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.social-icons {
+    display: flex;
+    list-style: none;
+    margin: 10px 0 0 7px; /* Margin for spacing */
+    padding: 0;
+}
+
+.social-icons li {
+    margin-right: 15px; /* Space between icons */
+    font-size: 20px;
+    color: #9C4DF4; /* Icon color */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.social-icons li:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+.footer-two, .footer-three, .footer-four {
+    padding: 0px;
+}
+
+.footer-two ul, .footer-three ul, .footer-four ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-two ul li, .footer-three ul li, .footer-four ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-two h2, .footer-three h2, .footer-four h2 {
+    margin-bottom: 15px;
+    margin-top: 3px;
+    font-size: 20px;
+    color: black;
+}
+
+.footer-two ul li:hover, .footer-three ul li:hover, .footer-four ul li:hover {
+    color: #ffcc00; /* Change color on hover */
+    cursor: pointer;
+}
+
+.icon {
+    color: #9C4DF4;
+    margin-right: 10px; /* Space between the icon and text */
+    font-size: 15px;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #5D5A6F;
+    width: 100%; /* Full width */
+    height: 0;
+    margin: 10px 0; /* Spacing above and below the line */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .footer > div {
+        margin: 10px 0; /* Increased bottom margin for spacing */
+    }
+
+    .footer-one {
+        align-items: center; /* Center items on smaller screens */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}

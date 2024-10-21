@@ -3,10 +3,10 @@
     /* padding: 20px 6%; */
     display: flex;
     justify-content: space-between;
-    position: fixed;
     font-size: 14px;
     color: #e5e5e5;
     z-index: 1;
+    margin-top: 0;
 }
 .search {
     width: 320px;
