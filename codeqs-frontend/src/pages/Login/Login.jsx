@@ -2,7 +2,7 @@ import './Login.css';
 import { useState } from 'react';
 import logo from '../../assets/logo.png';
 import login from '../../assets/login.png';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [signState, setSignState] = useState('Sign In');
@@ -37,6 +37,7 @@ const Login = () => {
             } else {
                 setError(data.message);
             }
+        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError('Something went wrong. Please try again.');
         }
