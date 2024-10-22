@@ -1,17 +1,22 @@
-import Home from "./pages/Home/Home"
-import Login from "./pages/Login/Login"
-import { Routes,Route } from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import AdminDashboard from './Components/AdminDashboard';
 
 const App = () => {
-  return (
-    <div className="app">
-      {/* <Login/> */}
-      <Routes>
-        <Route path='/' element ={<Home/>}/>
-        <Route path='/login' element ={<Login/>}/>
-      </Routes>
-    </div>
-  )
-}
+    return (
+        <Router>
+            <div className="app">
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/admin-dashboard' element={<AdminDashboard />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+};
 
-export default App
+export default App;
