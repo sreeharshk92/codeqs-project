@@ -38,6 +38,7 @@ const Login = () => {
             } else {
                 setError(data.message);
             }
+        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError('Something went wrong. Please try again.');
         }
