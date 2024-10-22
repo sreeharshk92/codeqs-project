@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; 
+
+import  { useState } from 'react';
 import './Navbar.css';
 import { CiSearch } from "react-icons/ci";
 import logo from '../../assets/logo.png';
@@ -9,6 +11,12 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const navigate = useNavigate(); 
+
+  const handleSignin = () => {
+    navigate('/login'); 
+  }
 
   return (
     <header className="navbar">
@@ -25,14 +33,20 @@ const Navbar = () => {
 <CiSearch className="mob-search-icon" />
 </div>
         
-        <a href="#home">Home</a>
-        <a href="#courses">Courses</a>
+        <Link to="/">Home</Link>
+        <Link to="/courses">Courses</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="/aboutus">About Us</Link>
+        <Link to="/contactus">Contact Us</Link>
+
+
+        {/* <li href="#courses">Courses</li>
         <a href="#services">Services</a>
         <a href="#blog">Blog</a>
         <a href="#about">About Us</a>
-        <a href="#contact">Contact us</a>
+        <a href="#contact">Contact us</a> */}
 
-        <button className="signup-btn">Sign up</button>
+        <button onClick={handleSignin} className="signup-btn">Sign up</button>
        
       </nav>
   
