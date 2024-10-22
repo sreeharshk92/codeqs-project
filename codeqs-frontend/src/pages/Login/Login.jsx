@@ -3,6 +3,7 @@ import { useState } from 'react';
 import logo from '../../assets/logo.png';
 import login from '../../assets/login.png';
 import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa";
 
 const Login = () => {
     const [signState, setSignState] = useState('Sign In');
@@ -44,8 +45,15 @@ const Login = () => {
         }
     };
 
+  const handlehome= () => {
+    navigate('/'); 
+  }
+
     return (
-        <div className='login'>
+        <div className='login' style={{ display: 'inline',  backgroundColor:'#F7F5FA'}}>
+           
+            <FaArrowLeft onClick={handlehome} style={{fontSize:'30px', paddingLeft:'10px',marginTop:'10px'}}/>
+            
             <div className="login-form">
                 <div className="logo-left">
                     <img src={logo} alt="" className='logo-img' />
@@ -81,7 +89,7 @@ const Login = () => {
                         <div className="form-help">
                             <div className="remember">
                                 <input type="checkbox" className='chkbx' />
-                                <label>Remember Me</label>
+                                <label htmlFor="" className='rm'>Remember Me</label>
                             </div>
                             <p>Need Help?</p>
                         </div>
