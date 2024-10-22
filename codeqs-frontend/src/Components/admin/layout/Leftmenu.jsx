@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTh } from '@fortawesome/free-solid-svg-icons';
-import '../leftmenu.css'; // Corrected import
+import '../leftmenu.css';
 
 const LeftMenu = () => {
     return (
-        <nav className="mt-2 left-menu">
-            <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <nav className="left-menu">
+            <ul className="nav nav-pills nav-sidebar flex-column" role="menu" data-accordion="false">
                 <li className="nav-item">
                     <Link to="/admin/dashboard" className="nav-link">
                         <FontAwesomeIcon icon={faTh} className="nav-icon" />

@@ -1,12 +1,14 @@
-import  { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Master from './admin/layout/Master';
+import LeftMenu from './admin/layout/Leftmenu';
+import './admin/adminDashboard.css';
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
         const userRole = localStorage.getItem('userRole');
-
         if (userRole !== 'admin') {
             navigate('/');
         }
@@ -14,9 +16,22 @@ const AdminDashboard = () => {
 
     return (
         <div className="admin-dashboard">
-            <h1>Admin Dashboard</h1>
-            <p>Welcome to the admin dashboard!</p>
-            {/* Add admin-specific features here */}
+            {/* Left sidebar */}
+            <LeftMenu />
+
+            {/* Main Content */}
+            <div className="dashboard-content">
+                {/* Top center content */}
+                <div className="dashboard-header">
+                    <h1>Admin Dashboard</h1>
+                    <p>Welcome to the admin dashboard!</p>
+                </div>
+
+                {/* Master Content */}
+                <div className="master-container">
+                    <Master />
+                </div>
+            </div>
         </div>
     );
 };
