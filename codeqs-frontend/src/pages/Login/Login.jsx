@@ -14,12 +14,12 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError(''); 
+        setError('');
         const url = signState === 'Sign In' ? 'http://localhost:8000/api/login' : 'http://localhost:8000/api/register';
         
         const body = signState === 'Sign In'
             ? { email, password }
-            : { name, email, password }; 
+            : { name, email, password };
 
         try {
             const response = await fetch(url, {
@@ -30,21 +30,21 @@ const Login = () => {
                 body: JSON.stringify(body),
             });
             const data = await response.json();
+
             if (response.ok) {
-               
-                console.log(data.message);
-                navigate("/");
+                const userRole = data.user.role; // Access the user role
+                localStorage.setItem('userRole', userRole);
+                navigate(userRole === 'admin' ? '/admin-dashboard' : '/');
             } else {
                 setError(data.message);
             }
-        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError('Something went wrong. Please try again.');
         }
     };
 
     return (
-        <div className='login' style={{ display: 'inline' }}>
+        <div className='login'>
             <div className="login-form">
                 <div className="logo-left">
                     <img src={logo} alt="" className='logo-img' />
@@ -80,7 +80,7 @@ const Login = () => {
                         <div className="form-help">
                             <div className="remember">
                                 <input type="checkbox" className='chkbx' />
-                                <label htmlFor="">Remember Me</label>
+                                <label>Remember Me</label>
                             </div>
                             <p>Need Help?</p>
                         </div>
