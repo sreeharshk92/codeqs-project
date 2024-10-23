@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import CourseCard from '../Coursecard/Coursecard';
 // import { IoIosArrowDropright } from "react-icons/io";
-import './Fcourse.css';
+import './Allcourses.css'
 
 const courses = [
   // Array of courses with dummy data
@@ -99,20 +99,20 @@ const courses = [
   // Add more courses as needed
 ];
 
-const Fcourse = () => {
-  const navigate = useNavigate();
+const Allcourses = () => {
+//   const navigate = useNavigate();
 
-  const handlebtn = () => {
-    navigate('/courses');
-  };
+//   const handlebtn = () => {
+//     navigate('/courses');
+//   };
 
   return (
     <div>
       <div className="header">
-        <h1 className='hdr-h1'>Featured Courses</h1>
-        <button onClick={handlebtn} className="all-courses-btn">All Courses</button>
+        {/* <h1 className='hdr-h1'>Featured Courses</h1> */}
+        {/* <button onClick={handlebtn} className="all-courses-btn">All Courses</button> */}
       </div>
-      <p className='hdr-p'>Explore our featured courses designed to help you gain in-demand skills and advance your career. Learn at <br /> your own pace with expert instructors, practical projects, and a supportive learning community.</p>
+      {/* <p className='hdr-p'>Explore our featured courses designed to help you gain in-demand skills and advance your career. Learn at <br /> your own pace with expert instructors, practical projects, and a supportive learning community.</p> */}
       <div className='g-arrow'>
       <div className="course-grid">
         {courses.map((course, index) => (
@@ -127,4 +127,4 @@ const Fcourse = () => {
   );
 };
 
-export default Fcourse;
+export default Allcourses;
