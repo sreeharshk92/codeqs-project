@@ -8,25 +8,30 @@
 /* Navbar */
 .navbar {
   display: flex;
+  height: 80px;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   padding: 1rem 2rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+  flex-wrap: wrap;
 }
-
 
 .search-bar {
   position: relative;
+  flex-grow: 1;
+  margin-right: 2rem;
 }
 
 .search-bar input {
-  padding: 0.7rem 1rem 0.7rem 2.5rem; 
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
   border-radius: 2rem;
   border: 1px solid #ccc;
-  width: 41rem;
+  width: 100%;
+  max-width: 500px;
   outline: none;
+  transition: border-color 0.3s ease;
 }
 
 .search-icon {
@@ -45,13 +50,25 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  border: none;
+  gap: 1rem; /* Reduced gap between links */
+  padding: 0;
+  box-shadow: none;
+  width: auto;
+  margin: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-weight: 600;
+  font-weight: 500; /* Adjusted font weight */
+  font-size: 0.9rem; /* Reduced font size */
+  padding: 0.5rem 1rem; /* Reduced padding */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+  color: #ff5e5e; /* Change color on hover */
 }
 
 .signup-btn {
@@ -69,17 +86,10 @@
   font-size: 2rem;
   cursor: pointer;
 }
-
-.hamburger-icon,
-.close-icon {
-  font-size: 2rem;
-  color: #333;
-}
-
-/* Responsive Styles */
-@media (min-width: 730px) and (max-width: 1306px) {
+ /* Responsive Styles */
+ @media (min-width: 730px) and (max-width: 1250px) {
   .search-bar input {
-    width: 15rem;
+    width: 20rem;
   }
 }
 
@@ -105,7 +115,7 @@
 
   .mob-search-icon {
     position: absolute;
-    left: 10px; 
+    left: 10px; /* Adjust this value for proper positioning */
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2rem;

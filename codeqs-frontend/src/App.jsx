@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home'; // Check this path
 import Login from './pages/Login/Login'; // Check this path
@@ -12,6 +11,8 @@ const App = () => {
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/" element={<PrivateRoute element={Home} />} />
+                <Route path="/Courses" element={<Courses/>} />
+
                 <Route path="/admin-dashboard" element={<PrivateRoute element={AdminDashboard} />} />
                 <Route path="/courses" element={<PrivateRoute element={Courses} />} />
                 

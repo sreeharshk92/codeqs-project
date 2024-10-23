@@ -2,47 +2,48 @@
     display: flex;
     justify-content: space-between;
     margin-left: 20px;
-    padding: 40px 10px; /* Increased padding for a more spacious layout */
-    background-color: #f7f7f7; /* Light background for contrast */
+    padding: 40px 10px;
+    background-color: #f7f7f7;
     color: #5D5A6F;
 }
 
 .footer > div {
     flex: 1;
-    margin: 0 20px; /* Uniform margin */
+    margin: 0 20px;
 }
 
 .footer-one {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
+    align-items: flex-start;
 }
 
-.footer-one p {
+.fp {
     padding-left: 7px;
+    font-size: 80%;
 }
 
 .logoimg {
     width: 120px;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
 }
 
 .social-icons {
     display: flex;
     list-style: none;
-    margin: 10px 0 0 7px; /* Margin for spacing */
+    margin: 10px 0 0 7px;
     padding: 0;
 }
 
 .social-icons li {
-    margin-right: 15px; /* Space between icons */
+    margin-right: 15px;
     font-size: 20px;
-    color: #9C4DF4; /* Icon color */
-    transition: color 0.3s; /* Smooth transition */
+    color: #9C4DF4;
+    transition: color 0.3s;
 }
 
 .social-icons li:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #ffcc00;
 }
 
 .footer-two, .footer-three, .footer-four {
@@ -67,41 +68,194 @@
 }
 
 .footer-two ul li:hover, .footer-three ul li:hover, .footer-four ul li:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #ffcc00;
     cursor: pointer;
 }
 
 .icon {
     color: #9C4DF4;
-    margin-right: 10px; /* Space between the icon and text */
+    margin-right: 10px;
     font-size: 15px;
 }
 
 .footer-line {
     border: none;
     border-top: 1px solid #5D5A6F;
-    width: 100%; /* Full width */
+    width: 100%;
     height: 0;
-    margin: 10px 0; /* Spacing above and below the line */
+    margin: 10px 0;
 }
 
 /* Responsive styling */
-@media (max-width: 768px) {
+
+
+@media (max-width: 810px) {
     .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px; /* Less padding on smaller screens */
+        height: auto;
+        flex-direction: row; 
+        padding: 10px;
+    }
+    
+
+    .footer > div {
+        margin: 10px 0;
+    }
+
+    
+    .logoimg{
+        width: 110px;
+
+    }
+    .social-icons li {
+        font-size: 20px;
+    }
+   .fp{
+        font-size:13px;
+    }
+   .footer-two h2{
+         font-size: 1.1rem;
+    }
+   .footer-two ul li{
+        font-size: small;
+        padding: 0;
+        margin: 3px 0;
+    }
+    .footer-two .icon{
+        font-size:15px;
+    }
+    .footer-three ul li{
+        margin-bottom: 3px;
+       font-size:small;
+    }
+   .footer-three h2{
+    font-size: 1.1rem;
+}  
+   .footer-four h2{
+    font-size: 1.1rem;
+}
+   .footer-four ul li{
+       margin-bottom: 3px;
+      font-size:small;
+   }
+  
+}
+@media (max-width: 730px) {
+    .footer {
+        height: auto;
+        flex-direction: row; 
+        
+        padding: 10px;
     }
 
     .footer > div {
-        margin: 10px 0; /* Increased bottom margin for spacing */
+        margin: 10px 0;
     }
 
-    .footer-one {
-        align-items: center; /* Center items on smaller screens */
+    
+    .logoimg {
+        width: 110px;
     }
 
-    .social-icons {
-        justify-content: center; /* Center social icons */
+    .social-icons li {
+        font-size: 20px;
+    }
+
+    .fp {
+        font-size: 13px;
+    }
+
+    .footer-two h2 {
+        font-size: 1rem;
+    }
+
+    .footer-two ul li {
+        font-size: small;
+        padding: 0;
+        margin: 3px 0;
+    }
+
+    .footer-two .icon {
+        font-size: 15px;
+    }
+
+    .footer-three ul li {
+        margin-bottom: 3px;
+        font-size: small;
+    }
+
+    .footer-three h2, .footer-four h2 {
+        font-size: 1rem;
+    }
+
+    .footer-four ul li {
+        margin-bottom: 3px;
+        font-size: small;
     }
 }
+
+
+@media (max-width: 480px) {
+    .footer {
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+        justify-content: space-between; /* Space between the items */
+        height: auto;
+        padding: 10px;
+    }
+
+    .footer > div {
+        width: 100%; /* Each div will take full width by default */
+        margin: 10px 0;
+    }
+
+    /* Place footer-one and footer-two in one row */
+    .footer-one, .footer-two {
+        width: 50%; /* Each will take half the width */
+    }
+
+    /* Place footer-three and footer-four in the next row */
+    .footer-three, .footer-four {
+        width: 50%; /* Each will take half the width */
+    }
+
+    .logoimg {
+        width: 110px;
+    }
+
+    .social-icons li {
+        font-size: 15px;
+    }
+
+    .fp {
+        font-size: x-small;
+    }
+
+    .footer-two h2 {
+        font-size: .9rem;
+    }
+
+    .footer-two ul li {
+        font-size: x-small;
+        padding: 0;
+        margin: 3px 0;
+    }
+
+    .footer-two .icon {
+        font-size: 12px;
+    }
+
+    .footer-three ul li {
+        margin-bottom: 3px;
+        font-size: x-small;
+    }
+
+    .footer-three h2, .footer-four h2 {
+        font-size: .9rem;
+    }
+
+    .footer-four ul li {
+        margin-bottom: 3px;
+        font-size: x-small;
+    }
+}
+
