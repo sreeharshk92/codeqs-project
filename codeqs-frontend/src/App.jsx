@@ -3,7 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
-import AdminDashboard from './Components/AdminDashboard';
+import AdminDashboard from "./Components/AdminDashboard";
+import Master from './Components/admin/layout/Master';
+import LeftMenu from './Components/admin/layout/Leftmenu';
 
 const App = () => {
     return (
@@ -13,6 +15,8 @@ const App = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/admin-dashboard' element={<AdminDashboard />} />
+                    <Route path='/master' element={<Master />} />
+                    <Route path='/leftmenu' element={<LeftMenu />} />
                 </Routes>
             </div>
         </Router>
