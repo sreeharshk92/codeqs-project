@@ -1,0 +1,98 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: #F7F5FA;
+    height: 70vh; /* Adjusted the height to 70% of the viewport */
+}
+
+.bnr-left {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bnr-left .btn1, .bnr-left .btn2 {
+    width: 250px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(234, 83, 83);
+    border: 2px solid white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bnr-left .btn1:hover, .bnr-left .btn2:hover {
+    background-color: rgb(234, 83, 83);
+    color: white;
+    border: 2px solid rgb(234, 83, 83);
+}
+
+.bnr-left h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.bnr-left p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.bnr-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bnr-img {
+    width: 400px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bnr-left {
+        padding: 20px;
+    }
+
+    .bnr-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .bnr-left p {
+        font-size: 1rem;
+    }
+
+    .bnr-img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bnr-left h1 {
+        font-size: 2rem;
+    }
+
+    .bnr-left p {
+        font-size: 0.9rem;
+    }
+
+    .bnr-img {
+        width: 250px;
+    }
+}
