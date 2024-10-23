@@ -1,3 +1,5 @@
+/* src/Components/admin/adminDashboard.css */
+
 /* AdminDashboard Layout */
 .admin-dashboard {
     display: flex;
@@ -5,36 +7,50 @@
     width: 100vw;
 }
 
+/* Top Header (Master) */
+.master-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays on top */
+}
+
 /* Left Menu Sidebar */
 .left-menu {
     width: 250px;
     position: fixed;
-    top: 0;
+    top: 60px; /* Adjusted to account for Master height */
     bottom: 0;
     left: 0;
     background-color: #2c3e50;
     padding-top: 20px;
 }
 
-/* Content Area (Excluding Sidebar) */
+/* Content Area (Excluding Sidebar and Top Header) */
 .dashboard-content {
     margin-left: 250px; /* Leave space for the sidebar */
-    width: calc(100% - 250px); /* Full width minus sidebar */
+    margin-top: 60px; /* Leave space for the Master */
     padding: 20px;
+    width: calc(100% - 250px); /* Full width minus sidebar */
+    background-color: #f9f9f9;
 }
 
 /* Dashboard Header - Top Centered */
 .dashboard-header {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Master Content */
-.master-container {
+/* Course Container */
+.course-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px; /* Space under the dashboard header */
+    margin-top: 20px; /* Space under the dashboard header */
 }
 
 /* Basic styling */

@@ -1,26 +1,48 @@
-nav {
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    padding: 20px;
-    margin-left: 250px; /* Adjusts for the fixed sidebar */
-}
-
-.nav-link {
+/* adminDashboard.css */
+.admin-dashboard-container {
     display: flex;
-    align-items: center;
-    color: #333;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dashboard-body {
+    display: flex;
+    flex: 1;
+}
+
+.master-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
     padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-.nav-link:hover {
-    background-color: #f0f0f0;
+.left-menu {
+    position: fixed;
+    top: 50px; /* Adjust based on master height */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 50px); /* Adjust height */
+    background-color: #1c2a39;
+    padding: 20px;
 }
 
-.nav-icon {
-    margin-right: 10px;
-    color: #3498db;
+.dashboard-content {
+    margin-left: 250px; /* Adjust based on left menu width */
+    padding: 20px;
+    width: 100%;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.dashboard-header {
+    text-align: center;
 }
