@@ -10,24 +10,18 @@ const AdminDashboard = () => {
     useEffect(() => {
         const userRole = localStorage.getItem('userRole');
         if (userRole !== 'admin') {
-            navigate('/');
+            navigate('/login'); // Redirect to login if not admin
         }
     }, [navigate]);
 
     return (
         <div className="admin-dashboard">
-            {/* Left sidebar */}
             <LeftMenu />
-
-            {/* Main Content */}
             <div className="dashboard-content">
-                {/* Top center content */}
                 <div className="dashboard-header">
                     <h1>Admin Dashboard</h1>
                     <p>Welcome to the admin dashboard!</p>
                 </div>
-
-                {/* Master Content */}
                 <div className="master-container">
                     <Master />
                 </div>

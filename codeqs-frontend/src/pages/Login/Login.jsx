@@ -34,26 +34,23 @@ const Login = () => {
 
             if (response.ok) {
                 const userRole = data.user.role; // Access the user role
-                localStorage.setItem('userRole', userRole);
-                navigate(userRole === 'admin' ? '/admin-dashboard' : '/');
+                localStorage.setItem('userRole', userRole); // Save role
+                navigate(userRole === 'admin' ? '/admin-dashboard' : '/'); // Navigate based on role
             } else {
-                setError(data.message);
+                setError(data.message || 'Login failed. Please try again.');
             }
-        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError('Something went wrong. Please try again.');
         }
     };
 
-  const handlehome= () => {
-    navigate('/'); 
-  }
+    const handleHome = () => {
+        navigate('/'); 
+    }
 
     return (
         <div className='login' style={{ display: 'inline',  backgroundColor:'#F7F5FA'}}>
-           
-            <FaArrowLeft onClick={handlehome} style={{fontSize:'30px', paddingLeft:'10px',marginTop:'10px'}}/>
-            
+            <FaArrowLeft onClick={handleHome} style={{fontSize:'30px', paddingLeft:'10px',marginTop:'10px'}}/>
             <div className="login-form">
                 <div className="logo-left">
                     <img src={logo} alt="" className='logo-img' />
@@ -96,7 +93,7 @@ const Login = () => {
                     </form>
                     <div className="form-switch">
                         {signState === 'Sign In'
-                            ? <p>New to? <span onClick={() => setSignState('Sign Up')}>Sign Up Now</span></p>
+                            ? <p>New to CODE QS? <span onClick={() => setSignState('Sign Up')}>Sign Up Now</span></p>
                             : <p>Already have an account? <span onClick={() => setSignState('Sign In')}>Sign In Now</span></p>
                         }
                     </div>
