@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTh } from '@fortawesome/free-solid-svg-icons';
 import '../leftmenu.css';
@@ -22,10 +23,10 @@ const LeftMenu = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                <Link to="/course" className="nav-link">
+                <Link to="/courselist" className="nav-link">
                         <FontAwesomeIcon icon={faTh} className="nav-icon" />
                         <p className="menu-item-text">
-                           courses
+                           courselist
                             <span className="right badge badge-danger">New</span>
                         </p>
                     </Link>

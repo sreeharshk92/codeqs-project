@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Master from './admin/layout/Master';
 import LeftMenu from './admin/layout/Leftmenu';
-import Course from './admin/Course';
+import Course from './admin/adminCourse';
 import './admin/adminDashboard.css';
 
 const AdminDashboard = () => {
