@@ -41,21 +41,31 @@ class CourseController extends Controller
     public function delete($id)
     {
         try {
-            $course = Course::find(decrypt($id));
+            Log::info('Received ID for deletion: ' . $id);
+            $course = Course::find($id); // Using plain ID
 
             if ($course) {
+                Log::info('Deleting course: ' . $course->name);
+
                 // Delete the associated image if it exists
                 if ($course->image) {
-                    Storage::delete('images/' . $course->image);
+                    $imagePath = 'images/' . $course->image;
+                    Log::info('Deleting image at path: ' . $imagePath);
+                    Storage::delete($imagePath);
                 }
+
                 $course->delete();
+                Log::info('Course deleted successfully.');
                 return response()->json(['message' => 'Course deleted successfully.'], 200);
             }
 
+            Log::warning('Course not found for ID: ' . $id);
             return response()->json(['error' => 'Course not found.'], 404);
         } catch (\Exception $e) {
             Log::error('Course deletion error: ' . $e->getMessage());
-            return response()->json(['error' => 'Failed to delete course'], 500);
+            return response()->json(['error' => 'Failed to delete course: ' . $e->getMessage()], 500);
         }
     }
+
+
 }
