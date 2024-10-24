@@ -36,12 +36,15 @@ const CourseList = () => {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`, // Assuming you're using tokens
                     },
                 });
+
                 if (!response.ok) {
-                    throw new Error('Failed to delete course');
+                    const errorResponse = await response.json();
+                    throw new Error(errorResponse.error || 'Failed to delete course');
                 }
-                // Re-fetch courses to update the list
+
                 setCourses(courses.filter(course => course.id !== id));
             } catch (error) {
+                console.error('Error deleting course:', error.message);
                 setError(error.message);
             }
         }

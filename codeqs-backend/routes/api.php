@@ -18,6 +18,6 @@ Route::middleware([HandleCors::class])->group(function () {
     Route::get('/categories', [CategoryController::class, 'index']);
     Route::post('/courses', [CourseController::class, 'save']);
     Route::get('/courses', [CourseController::class, 'list']);
-    Route::delete('/courses/{id}', [CourseController::class, 'delete']); // Route for deleting courses
+    Route::delete('/courses/{id}', [CourseController::class, 'delete']);
 
 });
