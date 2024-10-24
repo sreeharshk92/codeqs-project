@@ -6,9 +6,9 @@
   margin-left: 35px;
 }
 
-.all-courses-btn {
+.all-courses-btnn {
   background-color: #ff5e5e;
-  color: white;
+  color: rgb(20, 19, 19);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -17,11 +17,11 @@
   margin-right: 35px; /* Space between buttons */
 }
 
-.all-courses-btn:hover {
+.all-courses-btnn:hover {
   background-color: #efa6a6;
 }
 
-.hdr-p {
+.hdr-pp {
   padding-left: 35px;
   font-size: 16px;
   color: #5D5A6F;
@@ -48,10 +48,10 @@
     font-size: 28px;
   }
 
-  .hdr-p {
+  .hdr-pp {
     font-size: 13px;
   }
-  .all-courses-btn {
+  .all-courses-btnn {
     background-color: #ff5e5e;
     color: white;
     padding: 10px 20px; /* Button padding */
@@ -68,10 +68,10 @@
     font-size: 28px;
   }
 
-  .hdr-p {
+  .hdr-pp {
     font-size: 13px;
   }
-  .all-courses-btn {
+  .all-courses-btnn {
     background-color: #ff5e5e;
     color: white;
     font-size: x-small;
@@ -89,10 +89,10 @@
     font-size: 24px;
   }
 
-  .hdr-p {
+  .hdr-pp {
     font-size: 10px;
   }
-  .all-courses-btn {
+  .all-courses-btnn {
     background-color: #ff5e5e;
     color: white;
     font-size: x-small;
@@ -108,15 +108,18 @@
 
   .hdr-h1 {
     font-size: 1.2rem;
+    margin-left: -10px;
+
   }
 
-  .hdr-p {
-    font-size: 9px;
+  .hdr-pp {
+    font-size: 7px;
+    margin-left: -10px;
   }
-  .all-courses-btn {
+  .all-courses-btnn {
     background-color: #ff5e5e;
     color: white;
-    font-size: x-small;
+    font-size: 7px;
     padding: 5px 5px; /* Button padding */
     margin-right: 30px; /* Space between buttons */
   }

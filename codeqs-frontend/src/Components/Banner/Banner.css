@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60vh; /* Full height for large screens */
+  height: 70vh; /* Full height for large screens */
   padding: 20px;
   background-color: #F7F5FA;
   transition: all 0.3s ease-in-out; /* Smooth transition */
@@ -14,12 +14,13 @@
 .bnr-left {
   flex: 1;
   margin-left: 20px;
+  font-size:1.3rem;
   padding-right: 20px;
   transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
 .bnr-p {
-  font-size: small;
+  font-size: 1rem;
   color: #5D5A6F;
   transition: all 0.3s ease-in-out; /* Smooth transition */
 }
@@ -33,7 +34,7 @@
 }
 
 .bnr-img {
-  max-width: 50%;
+  width: 60%;
   height: auto;
   transition: all 0.3s ease-in-out; /* Smooth transition */
 }
@@ -104,18 +105,18 @@ p {
   }
 
   .bnr-img {
-    max-width: 70%; /* Smaller image */
+    max-width: 90%; /* Smaller image */
   }
 
   .b-h1 {
-    margin-left: 5px;
-    font-size: 1.5rem; /* Slightly smaller heading */
+    margin-left: 1px;
+    font-size: 1rem; /* Slightly smaller heading */
   }
 
-  .bnr-p {
-    margin-left: 5px;
+  /* .bnr-p {
+    margin-left: 1px;
     font-size: 0.6rem;
-  }
+  } */
 
   .btn1, .btn2 {
     padding: 5px 12px; /* Reduce padding */
@@ -130,7 +131,7 @@ p {
   }
 
   .bnr-img {
-    max-width: 100%; /* Smaller image for mobile */
+    width: 100%; /* Smaller image for mobile */
   }
 
   .bnr-h1 {
@@ -138,7 +139,7 @@ p {
   }
 
   .bnr-p {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
 
   .btn1, .btn2 {

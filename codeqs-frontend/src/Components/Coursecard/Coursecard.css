@@ -3,8 +3,8 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   padding: 16px;
-  height: 60vh;
-  width: 100%;
+  /* height: 50vh; */
+  width: 250px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -18,35 +18,40 @@
 
 .course-cover-pic {
   width: 100%;
-  height: 170px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .course-content {
-  padding-top: 12px;
+  margin: 10px;
+  
 }
 
 .course-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.course-description {
-  color: #555;
+  margin-top: 0;
+  padding:5px 0; 
   font-size: 12px;
-  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.course-content p {
-  font-size: 15px;
+.course-des {
+  color: #555;
+  padding: 0 0 5px 0;
+  font-size: 10px;
+  margin:0 ;
+}
+
+.ps{
+  font-size: 10px;
+  padding: 0 0 5px 0;
+  margin: 0;
 }
 
 .course-price {
-  font-size: 14px;
+  font-size: 10px;
   color: #27ae60;
-  margin-top: 8px;
+  margin: 0;
 }
 
 .course-enroll-button {
@@ -55,6 +60,7 @@
   padding: 10px 12px;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 12px;
   text-align: center;
   display: block;
   width: 100%;
@@ -68,85 +74,125 @@
 
 /* Responsive styles */
 @media (max-width: 1200px) {
+  .course-card {
+    height: 280px;
+    width: auto;
+  }
+  /* .course-content{
+    padding: 0;
+    margin: 0;
+  } */
   .course-title {
-    font-size: 16px; /* Slightly smaller title */
+   padding: 0;
+   margin: 1px;
+    font-size: 12px; /* Smallest title */
+
   }
 
-  .course-description {
-    font-size: 11px; /* Slightly smaller description */
+  .course-des {
+    padding: 1px;
+    margin: 0;
+    font-size: 11px; /* Smallest description */
   }
-
-  .course-content p {
-    font-size: 14px; /* Slightly smaller text */
+  
+  .ps{
+    font-size: 11px;
+    padding: 1px;
+    margin: 0;
   }
 
   .course-price {
-    font-size: 13px; /* Smaller price */
+    padding: 1px;
+    margin: 0;
+    font-size: 11px; /* Smallest price */
   }
+  .course-enroll-button{
+    height: 1.7rem;
+    font-size:11px;
+    padding: 7px;
+    margin: 0;
+  }
+
 }
 
 @media (max-width: 992px) {
   .course-card {
-    height: 350px;
+    width: auto;
+    height: 280px;
   }
+  /* .course-content{
+    padding: 0;
+    margin: 0;
+  } */
   .course-title {
-    font-size: 14px; /* Even smaller title */
+   padding: 0;
+   margin: 1px;
+    font-size: 11px; /* Smallest title */
+
   }
 
-  .course-description {
-    font-size: 10px; /* Even smaller description */
-  }
-
-  .course-content p {
-    font-size: 12px; /* Smaller text */
-  }
-
-  .course-price {
-    font-size: 12px; /* Smaller price */
-  }
-}
-
-@media (max-width: 768px) {
-  .course-card {
-    height: 300px;
-  }
-  .course-title {
-    font-size: 10px; /* Smallest title */
-  }
-
-  .course-description {
-    font-size: 9px; /* Smallest description */
-  }
-
-  .course-content p {
-    font-size: 10px; /* Smallest text */
-  }
-
-  .course-price {
-    font-size: 10px; /* Smallest price */
-  }
-}
-@media (max-width: 480px) {
-  .course-card {
-    height: 250px;
-  }
-  .course-title {
-    font-size: 9; /* Smallest title */
-  }
-
-  .course-description {
-    font-size: .1rem; /* Smallest description */
+  .course-des {
+    padding: 1px;
+    margin: 0;
+    font-size: 10px; /* Smallest description */
   }
   
-  .course-content p {
-    font-size: 10px; /* Smallest text */
+  .ps{
+    font-size: 10px;
+    padding: 1px;
+    margin: 0;
   }
 
   .course-price {
+    padding: 1px;
+    margin: 0;
     font-size: 10px; /* Smallest price */
   }
   .course-enroll-button{
-    height: 1.9rem;
+    height: 1.6rem;
+    font-size:11px;
+    padding: 6px;
+    margin: 0;
+  }
+
+}
+@media (max-width: 480px) {
+  .course-card {
+    height: 200px;
+    width: 150px;
+  }
+  /* .course-content{
+    padding: 0;
+    margin: 0;
+  } */
+  .course-title {
+   padding: 0;
+   margin: 1px;
+    font-size: 9px; /* Smallest title */
+
+  }
+
+  .course-des {
+    padding: 1px;
+    margin: 0;
+    font-size: 8px; /* Smallest description */
+  }
+  
+  .ps{
+    font-size: 8px;
+    padding: 1px;
+    margin: 0;
+  }
+
+  .course-price {
+    padding: 1px;
+    margin: 0;
+    font-size: 8px; /* Smallest price */
+  }
+  .course-enroll-button{
+    height: 1rem;
     font-size:9px;
+    padding: 3px;
+    margin: 0;
   }
 }

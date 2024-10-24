@@ -110,9 +110,9 @@ const Fcourse = () => {
     <div>
       <div className="header">
         <h1 className='hdr-h1'>Featured Courses</h1>
-        <button onClick={handlebtn} className="all-courses-btn">All Courses</button>
+        <button onClick={handlebtn} className="all-courses-btnn">All Courses</button>
       </div>
-      <p className='hdr-p'>Explore our featured courses designed to help you gain in-demand skills and advance your career. Learn at <br /> your own pace with expert instructors, practical projects, and a supportive learning community.</p>
+      <p className='hdr-pp'>Explore our featured courses designed to help you gain in-demand skills and advance your career. Learn at <br /> your own pace with expert instructors, practical projects, and a supportive learning community.</p>
       <div className='g-arrow'>
       <div className="course-grid">
         {courses.map((course, index) => (
