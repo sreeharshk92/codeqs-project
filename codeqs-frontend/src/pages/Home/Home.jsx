@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Fcourse from '../../Components/Featuredcourse/Fcourse';
 
 import './Home.css';
+import Sbar from '../../Components/S-Banner/Sbar';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <Banner/>
       <Fcourse/>
      
-      
+      <Sbar/>
       <Footer/>
     </div>
   );

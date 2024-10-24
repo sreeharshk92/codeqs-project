@@ -1,0 +1,114 @@
+.main-sbaner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .main-sbaner img {
+    width: 100%;
+    height: auto;
+    border-radius: 40PX;
+    padding: 28PX;
+  }
+  
+  .main-sbaner h1, .main-sbaner p, .main-sbaner label, .main-sbaner input, .main-sbaner button {
+    position: absolute;
+    z-index: 1; /* Ensure content is displayed over the image */
+  }
+  
+  .main-sbaner h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .main-sbaner p {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .main-sbaner label {
+    margin-top: 10px;
+  }
+  
+  .main-sbaner input {
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    width: 300px;
+  }
+  
+  .main-sbaner button {
+    background-color: darkviolet;
+    color: rgb(238, 233, 233);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  .main-sbaner button:hover {
+    background-color: rgb(205, 183, 183);
+    
+  }
+  
+  .main-sbaner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    padding: 50PX;
+  }
+  
+  .main-sbaner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+  
+  .main-sbaner h1, .main-sbaner p, .main-sbaner label, .main-sbaner input, .main-sbaner button {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  @media (min-width:300px) and (max-width:450px)  {
+
+
+   
+.main-sbaner input {
+  width: 260px;
+}
+
+.main-sbaner h1 {
+
+  font-size: 25px;
+  font-weight: 750;
+}
+
+
+.main-sbaner p{
+
+  font-size: 12px;
+  font-weight: 550;
+}
+   
+
+  }
+  
+  
+

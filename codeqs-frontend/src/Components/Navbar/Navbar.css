@@ -8,6 +8,7 @@
 /* Navbar */
 .navbar {
   display: flex;
+  flex-direction: row;
   height: 80px;
   justify-content: space-between;
   align-items: center;
@@ -61,10 +62,10 @@
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-weight: 500; /* Adjusted font weight */
-  font-size: 0.9rem; /* Reduced font size */
-  padding: 0.5rem 1rem; /* Reduced padding */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-weight: 500; 
+  font-size: 0.9rem; 
+  padding: 0.5rem 1rem; 
+  transition: color 0.3s ease; 
 }
 
 .nav-links a:hover {
